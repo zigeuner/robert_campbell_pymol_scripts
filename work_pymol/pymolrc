@@ -1,0 +1,213 @@
+#_ feedback push
+#_ feedback disable,all,everything
+# RENAME TO .pymolrc AND INSERT COMMANDS HERE
+
+#only needed with fglrx?
+#set ati_bugs, 1
+
+# use white background
+#set bg_rgb, 1 1 1
+set bg_rgb, white
+set dihedral_color, red
+set angle_color, deepteal
+
+# set orthoscopic, rather than perspective as the default
+# turn off for use with radeon not fglrx
+set orthoscopic, 1
+#set orthoscopic, 0
+#set field_of_view, 10
+
+
+set hash_max, 170
+
+# turn off auto zoom
+set auto_zoom, 0
+
+set use_shaders, on
+set cartoon_use_shader, on
+#set cgo_shader_ub_color, on
+#set cgo_shader_ub_flags, on
+#set cgo_shader_ub_normal, on
+set cgo_use_shader, on
+#set dash_use_shader, on
+set dash_use_shader, on
+set dot_use_shader, on
+#set line_use_shader, off
+#set mesh_use_shader, off
+set nb_spheres_use_shader, on
+set nonbonded_use_shader, on
+set ribbon_use_shader, on
+set ribbon_as_cylinders, on
+set line_as_cylinders, on
+#set sphere_use_shader, off
+#set stick_use_shader, off
+#set surface_use_shader, off
+
+
+set sphere_mode, 0
+
+# set surface_ramp_above_mode, 1
+# colors surfaces based on the potential that would be felt by an atom
+# in contact with the surface, as opposed to the potential at the
+# molecular surface itself (which is less meaningful, since no atom
+# could ever feel such a potential).
+set surface_ramp_above_mode, 1
+set cgo_line_radius, 0.15
+set line_width, 2
+set cgo_line_width, 3
+set cgo_sphere_quality, 2
+set ribbon_radius, .2
+set ribbon_width, 3
+set ribbon_sampling, 1
+set cartoon_smooth_loop, 0
+set cartoon_discrete_colors, 1
+#set nonbonded_size, .25
+
+# dashes
+set dash_color, default
+set dash_gap, 0.35000
+set dash_length, 0.15000
+set dash_radius, 0.07500
+set dash_round_ends, on
+set dash_width, 3.00000
+
+# adjust label font and size
+set label_font_id, 7
+set label_size, -0.5
+
+set stick_radius, .2
+set fog, 1.
+
+set animation, 1
+set animation_duration, .1
+set scene_animation, 1
+set scene_animation_duration, 1
+
+# set spec_refl to 2. for bright reflections, .5 for dimmer
+set spec_refl, 1.5
+# set spec_power to 200 for tight reflections, 40 for broader
+set spec_power, 100
+
+set specular, 0
+
+# default to antialiased rendering (on or 1)
+set antialias, on
+# to set background to transparent for ray tracing, set the following off, or 0
+set ray_opaque_background, on
+# Turn on clipping of shadows, i.e. set so that object in front of clipping plane (not invisible) does not shadow 
+# the visible part of the object
+set ray_clip_shadows, 1
+
+# F1 to turn on sculpting
+#cmd.set_key('F1',lambda :(cmd.set("sculpting"),cmd.set("auto_sculpt")))
+
+# F2 to turn off sculpting
+#cmd.set_key('F2',lambda :(cmd.unset("sculpting"),cmd.unset("auto_sculpt")))
+
+#cmd.set_key("ALT-1",cmd.scene,("001",))
+#cmd.set_key("ALT-2",cmd.scene,("002",))
+#cmd.set_key("ALT-3",cmd.scene,("003",))
+#cmd.set_key("ALT-4",cmd.scene,("004",))
+#cmd.set_key("ALT-5",cmd.scene,("005",))
+#cmd.set_key("ALT-6",cmd.scene,("006",))
+#cmd.set_key("ALT-7",cmd.scene,("007",))
+#cmd.set_key("ALT-8",cmd.scene,("008",))
+#cmd.set_key("ALT-9",cmd.scene,("009",))
+
+# The following may not be necessary now as one can set the preferred
+# color space see the "Display -> Color Space" menu item in the main GUI
+#optimized rgb values for cmyk output:
+set_color _dblue,    [0.05 , 0.19 , 0.57]
+set_color _blue,     [0.02 , 0.50 , 0.72]
+set_color _mblue,    [0.50 , 0.70 , 0.90]
+set_color _lblue,    [0.86 , 1.00 , 1.00]
+set_color _vlblue,   [0.90 , 0.93 , 1.00]
+
+set_color _green,    [0.00 , 0.53 , 0.22]
+set_color _lgreen,   [0.50 , 0.78 , 0.50]
+set_color _vlgreen,  [0.87 , 1.00 , 0.87]
+set_color _vlcyan,   [0.90 , 1.00 , 0.95]
+
+set_color _yellow,   [0.95 , 0.78 , 0.00]
+set_color _lyellow,   [0.8 , 0.8 , 0.5]
+set_color _vlyellow, [1.00 , 1.00 , 0.87]
+set_color _vlorange, [1.00 , 0.90 , 0.80]
+
+set_color _orange,   [1.00 , 0.40 , 0.0 ]
+
+# these are trivial
+set_color _red,      [1.00 , 0.00 , 0.00]
+set_color _mred,     [1.00 , 0.40 , 0.40]
+set_color _lred,     [1.00 , 0.80 , 0.80]
+set_color _vlred,    [1.00 , 0.90 , 0.90]
+set_color _white,    [1.00 , 1.00 , 1.00]
+set_color _vlgray,   [0.95 , 0.95 , 0.95]
+set_color _lgray,    [0.90 , 0.90 , 0.90]
+set_color _gray,     [0.70 , 0.70 , 0.70]
+set_color _dgray,    [0.50 , 0.50 , 0.50]
+set_color _vdgray,   [0.30 , 0.30 , 0.30]
+set_color _black,    [0.00 , 0.00 , 0.00]
+##
+
+set_color gold,            [1.00 , 0.80 , 0.00]
+set_color gold2,           [0.90 , 0.60 , 0.00]
+set_color lightblue,       [0.60 , 0.80 , 1.00]
+set_color verylightblue,   [0.80 , 0.90 , 1.00]
+set_color lightred,        [1.00 , 0.80 , 0.80]
+set_color verylightred,    [1.00 , 0.90 , 0.90]
+set_color lightgreen,      [0.50 , 1.00 , 0.50]
+set_color verylightgreen,  [0.90 , 1.00 , 0.90]
+set_color darkgreen,       [0.00 , 0.30 , 0.00]
+set_color darkred,         [0.30 , 0.00 , 0.00]
+
+# alter dash colour
+set_color dash, [0.4, 0.4, 0.4]
+
+# run some of my scripts (see http://adelie.biochem.queensu.ca/~rlc/work/pymol/ for these)
+run /home/rlc/prog/python/grepset.py
+#_py2_#_#run /home/rlc/prog/python/load_best.py
+#_py2_#_run /home/rlc/prog/python/load_models.py
+#_py2_#_#run /home/rlc/prog/python/load_sep.py
+#_py2_#_run /home/rlc/prog/python/load_list.py
+#_py2_#_run /home/rlc/prog/python/load_files.py
+run /home/rlc/prog/python/color_b.py
+#_run /home/rlc/prog/python/stride_ss.py
+run /home/rlc/prog/python/color_by_restype.py
+run /home/rlc/prog/python/color_by_attype.py
+#run /home/rlc/prog/python/cctbx/draw_symops_cctbx.py
+#run /home/rlc/prog/python/cctbx/draw_cell.py
+run /home/rlc/prog/python/data2bfactor.py
+#run /home/rlc/prog/python/make_polymer.py
+run /home/rlc/prog/python/colordist.py
+#run /home/rlc/prog/python/make_pov.py
+#_py2_#_run /home/rlc/prog/python/seq_select.py
+#run /home/rlc/prog/python/build_seq.py
+#run /home/rlc/prog/python/build_seq_phi_psi.py
+#
+# change autocompletion to be object names first and then file names in current directory
+#python
+#import glob
+#cmd.auto_arg[0]['select'] = [
+#   lambda: cmd.Shortcut(cmd.get_names() + glob.glob('*')),
+#   'object name', '']
+#cmd.auto_arg[0]['save'] = [
+#   lambda: cmd.Shortcut(cmd.get_names() + glob.glob('*')),
+#   'filename or object name', '']
+#python end
+
+# do not force atom order for export to be the same as input file
+set retain_order, 0
+
+# set size of graphics window
+# standard 1.25 SVGA ratio:
+#viewport 1280,1024
+#viewport 1100,880
+# 1.333 ratio
+#viewport 1024, 768
+viewport 1100, 900
+alias vp, viewport 1100, 900
+alias get_vp, print (cmd.get_session()['main'][0:2])
+#print cmd.get_session()['main'][0:2]
+# END COMMANDS
+#_ feedback pop
+
